@@ -1,5 +1,17 @@
 {
   "compilerOptions": {
+
+    // import exort 関連
+    "esModuleInterop": true,
+    
+    "lib": ["dom", "esnext"],
+    
+    // json 読みたい
+    "resolveJsonModule": true,
+    
+    "types": ["jest", "node"],
+
+    // -----------------
     "module": "commonjs",
     "noImplicitReturns": true,
     "noUnusedLocals": true,
