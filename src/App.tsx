@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+
+import { Button1 } from './components/Button';
+
+const fetch1 = () =>
+  fetch('http://localhost:5000/my-app2-bcfdb/asia-northeast1/helloWorld');
+
+const useAPI1 = () => {
+  const [clicked, setClicked] = useState(false);
+
+  useEffect(() => {
+    if (clicked) {
+      fetch1().then(r => {
+        // eslint-disable-next-line no-console
+        console.log(r);
+      });
+    }
+    setClicked(false);
+  }, [clicked]);
+
+  return { setClicked };
+};
 
 const App: React.FC = () => {
+  const { setClicked } = useAPI1();
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Button1 onClkck={() => setClicked(true)} />
     </div>
   );
-}
+};
 
 export default App;

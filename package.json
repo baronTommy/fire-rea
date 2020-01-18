@@ -67,24 +67,5 @@
     "stylelint-order": "^4.0.0",
     "stylelint-processor-styled-components": "^1.9.0",
     "ts-jest": "^24.3.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "git add"
-    ],
-    "src/**/*.{css,jsx,tsx}": [
-      "stylelint --fix",
-      "git add"
-    ],
-    "functions/src/**/*.{js,ts}": [
-      "cd functions/ && eslint --fix",
-      "git add"
-    ]
   }
 }
