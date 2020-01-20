@@ -21,6 +21,7 @@
   "dependencies": {
     "add": "^2.0.6",
     "commander": "^4.1.0",
+    "cross": "^1.0.0",
     "csv-parse": "^4.8.5",
     "date-fns": "^2.9.0",
     "date-fns-timezone": "^0.1.4",
@@ -31,6 +32,7 @@
     "lodash": "^4.17.15",
     "node-fetch": "^2.6.0",
     "puppeteer": "^2.0.0",
+    "typesaurus": "^5.0.0",
     "yarn": "^1.21.1"
   },
   "devDependencies": {
